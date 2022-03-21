@@ -1,0 +1,160 @@
+.ui.form {
+  font-size: 15px;
+}
+
+.ui.form .fields {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0em 0em;
+  padding-bottom: 10px;
+  flex-flow: row wrap;
+}
+
+//drop
+.ui.form .fields > .field {
+  clear: both;
+  min-width: 21% !important;
+  margin: 1rem 2rem 0 2rem;
+  padding-bottom: 10px;
+}
+
+.ui.form .three.wide.field {
+  min-width: 21% !important;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.searchBtn {
+  background-color: brown;
+}
+
+.ui.small.button,
+.ui.small.buttons .button,
+.ui.small.buttons .or {
+  font-size: 15px;
+}
+
+.accordion_process {
+  width: 400px;
+  //  border: 2px solid brown;
+  background-color: white;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.ui.accordion .active.content {
+  display: block;
+  border: 2px solid brown;
+  border-radius: 0px 0px 5px 5px;
+}
+
+.ui.sticky.fixed {
+  position: fixed;
+  left: auto;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 1.9rem;
+}
+
+.ui.accordion .title {
+  background-color: brown;
+  display: flex;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.ui.accordion .active.title {
+  background-color: brown;
+  display: flex;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.acc_header {
+  color: white;
+}
+
+.ui.table.header_body {
+  color: white;
+}
+
+.ui.table.content_body {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+}
+.a_link {
+  color: brown;
+  font-size: 15px;
+}
+a {
+  font-size: 15px;
+}
+a:hover {
+  color: #e18b8b;
+  text-decoration: none;
+}
+.btn_gp {
+  margin-left: 20px;
+}
+.ui.container {
+  display: block;
+  max-width: 100% !important;
+  color: white;
+}
+
+.ui.form .two.wide.field.export-fields {
+  min-width: 27.5% !important;
+}
+
+.ui.modal > .content {
+  text-align: left;
+}
+
+.two.wide.field.hidden-inp {
+  visibility: hidden;
+  input : {
+    line-height: 0 !important;
+  }
+}
+
+.ui.card > .content {
+  padding-top: 0.5em 1em 1em 1em !important;
+  .select-check {
+    float: right;
+    //  margin-bottom: 0.5em !important;
+  }
+}
+.ui.card.select-all {
+  color: #ba242d !important;
+}
+
+.ui.card.select-all:hover {
+  color: #ba242d;
+}
+.ui.card.trxn {
+  color: black !important;
+}
+
+.ui.card.trxn:hover {
+  color: black;
+}
+
+.select-check {
+  color: green !important;
+}
+
+.download_btn {
+  background-color: #fff !important;
+  color: #ba242d !important;
+  border-radius: 5px !important;
+  border: 1px solid #ba242d !important;
+}
+
+.download_btn:hover {
+  color: #fff !important;
+  background-color: #ba242d !important;
+}
