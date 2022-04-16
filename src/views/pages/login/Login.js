@@ -71,13 +71,12 @@ const Login = () => {
   const onSubmit = async (values, { setSubmitting }) => {
     setLoading(true);
     setSubmitting(true);
-    console.log("valuesXXX",values,defaultUserName,defaultPassword)
     if( values.username === defaultUserName && values.password === defaultPassword){
       setLoading(false);
       let authInfo ={
         token:{
           token:"jO5mzzz5Au2PcFq9DnAmdY6EEBBSSDSFF",
-          expiredAt: new Date(Date.now() + (30 * 60 * 1000))
+          expiredAt: new Date(Date.now() + (24*60*60*1000))
         },
         auth:{username:process.env.USERNAME}
       };
