@@ -48,8 +48,8 @@ const validate = (getValidationSchema) => (values) => {
 };
 
 const initialValues = {
-  username: "",
-  password: "",
+  username: '',
+  password: '',
 };
 
 const Login = () => {
@@ -58,6 +58,8 @@ const Login = () => {
   const [redirectOnLogin, setRedirectOnLogin] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
+  const defaultUserName = process.env.REACT_APP_USERNAME;
+  const defaultPassword = process.env.REACT_APP_PASSWORD;
 
   useEffect(() => {
     if (authContext.isExpired()) {
@@ -69,13 +71,24 @@ const Login = () => {
   const onSubmit = async (values, { setSubmitting }) => {
     setLoading(true);
     setSubmitting(true);
-
-    // let authInfo ={};
-    // Object.assign(authInfo, {
-    //   auth: {username:'admin',password:'123456'},
-    // });
-    // authContext.setAuthState(authInfo);
-    setRedirectOnLogin(true);
+    console.log("valuesXXX",values,defaultUserName,defaultPassword)
+    if( values.username === defaultUserName && values.password === defaultPassword){
+      setLoading(false);
+      let authInfo ={
+        token:{
+          token:"jO5mzzz5Au2PcFq9DnAmdY6EEBBSSDSFF",
+          expiredAt: new Date(Date.now() + (30 * 60 * 1000))
+        },
+        auth:{username:process.env.USERNAME}
+      };
+      authContext.setAuthState(authInfo);
+      setTimeout(() => {
+        setRedirectOnLogin(true);
+      }, 700);
+    }else{
+      toast.addToast('ERROR', "UserName and Password is incorrect", 'error');
+      setLoading(false);
+    }
   };
 
   return (
@@ -132,7 +145,7 @@ const Login = () => {
                     valid={touched.username && !errors.username}
                     invalid={touched.username && !!errors.username}
                     error={errors.username !== undefined}
-                    placeholder="Username"
+                    placeholder="UserName (admin)"
                     className="auth-input-field"
                   />
                   <Form.Input
@@ -144,7 +157,7 @@ const Login = () => {
                     onChange={handleChange}
                     onBlur={handleBlur}
                     error={errors.password !== undefined}
-                    placeholder="Password"
+                    placeholder="Password (123456)"
                     autoComplete="current-password"
                     icon={
                       <Icon

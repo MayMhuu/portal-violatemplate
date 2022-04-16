@@ -10,11 +10,15 @@ import { AuthProvider } from "./context/authContext";
 import { ToastProvider } from "./context/toastContext";
 import { routWithFetchProvider as FetchProvider } from "./context/fetchContext";
 import Page404 from "./views/pages/page404/Page404";
-import Spinner from "./assets/images/spinner.gif";
+import Spinner from "./assets/images/loading.gif";
 
 const loading = (
-  <div class="ui segment">
-    <img class="ui centered medium image" src={Spinner} />
+  <div class="ui center aligned container">
+    <img
+      class="ui centered image"
+      style={{ opacity: 0.2 }}
+      src={Spinner}
+    />
   </div>
 );
 

@@ -2,13 +2,6 @@ import React, { Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./MainContent.scss";
 import routes from "../../routes";
-import Spinner from '../../assets/images/spinner.gif'
-
-const loading = (
-  <div class="ui segment">
-    <img class="ui centered medium image" src={Spinner} />
-  </div>
-);
 
 const MainContent = (props) => {
   return (
