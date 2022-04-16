@@ -2,18 +2,17 @@ import React, { Suspense } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./MainContent.scss";
 import routes from "../../routes";
+import Spinner from '../../assets/images/spinner.gif'
 
 const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse" />
+  <div class="ui segment">
+    <img class="ui centered medium image" src={Spinner} />
   </div>
 );
 
 const MainContent = (props) => {
   return (
     <div>
-      {props.children}
-      <Suspense fallback={loading}>
         <Switch>
           {routes.map(
             (route) =>
@@ -28,7 +27,7 @@ const MainContent = (props) => {
               )
           )}
         </Switch>
-      </Suspense>
+
     </div>
   );
 };

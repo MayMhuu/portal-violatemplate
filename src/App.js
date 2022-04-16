@@ -1,29 +1,30 @@
-import React from 'react';
+import React from "react";
 import {
   Route,
   Switch,
   Redirect,
   BrowserRouter as Router,
-} from 'react-router-dom';
-import './scss/style.scss';
-import { AuthProvider } from './context/authContext';
-import { ToastProvider } from './context/toastContext';
-import { routWithFetchProvider as FetchProvider } from './context/fetchContext';
-import Page404 from './views/pages/page404/Page404';
+} from "react-router-dom";
+import "./scss/style.scss";
+import { AuthProvider } from "./context/authContext";
+import { ToastProvider } from "./context/toastContext";
+import { routWithFetchProvider as FetchProvider } from "./context/fetchContext";
+import Page404 from "./views/pages/page404/Page404";
+import Spinner from "./assets/images/spinner.gif";
 
 const loading = (
-  <div className="pt-3 text-center">
-    <div className="sk-spinner sk-spinner-pulse" />
+  <div class="ui segment">
+    <img class="ui centered medium image" src={Spinner} />
   </div>
 );
 
 // Containers
 const TheLayout = React.lazy(
-  async () => await import('./containers/TheLayout'),
+  async () => await import("./containers/TheLayout")
 );
 
 // Pages
-const Login = React.lazy(() => import('./views/pages/login/Login'));
+const Login = React.lazy(() => import("./views/pages/login/Login"));
 
 const AppRoutes = () => {
   return (
