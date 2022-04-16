@@ -3,7 +3,7 @@ import {
   Route,
   Switch,
   Redirect,
-  BrowserRouter as Router,
+  HashRouter as Router,
 } from "react-router-dom";
 import "./scss/style.scss";
 import { AuthProvider } from "./context/authContext";
