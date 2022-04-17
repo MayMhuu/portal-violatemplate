@@ -60,6 +60,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const defaultUserName = process.env.REACT_APP_USERNAME;
   const defaultPassword = process.env.REACT_APP_PASSWORD;
+  const defaultToken = process.env.REACT_APP_TOKEN;
 
   useEffect(() => {
     if (authContext.isExpired()) {
@@ -76,7 +77,7 @@ const Login = () => {
       setLoading(false);
       let authInfo ={
         token:{
-          token:"jO5mzzz5Au2PcFq9DnAmdY6EEBBSSDSFF",
+          token:defaultToken,
           expiredAt: new Date(Date.now() + (30 * 60 * 1000))
         },
         auth:{username:process.env.USERNAME}
@@ -145,7 +146,7 @@ const Login = () => {
                     valid={touched.username && !errors.username}
                     invalid={touched.username && !!errors.username}
                     error={errors.username !== undefined}
-                    placeholder="UserName (admin)"
+                    placeholder="UserName (devadmin)"
                     className="auth-input-field"
                   />
                   <Form.Input
