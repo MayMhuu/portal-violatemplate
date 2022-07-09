@@ -2,6 +2,6 @@
 Reporting Portal
 # UserAuthentication
 
-Url = https://maymhuu.github.io/semantic-violatemplate/
+Url = https://maymhuu.github.io/portal-violatemplate/
 
 Username = admin / Password = 123456
