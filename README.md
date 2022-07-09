@@ -1,4 +1,4 @@
-# semantic-violatemplate
+# portal-violatemplate using Semantic UI
 Reporting Portal
 # UserAuthentication
 
