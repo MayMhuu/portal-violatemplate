@@ -1,7 +1,12 @@
-# portal-violatemplate using Semantic UI
-Reporting Portal
+# portal-biolerplate
+
+Here is a link to a demo of the portal biolerplate
+https://maymhuu.github.io/portal-violatemplate/
+
+Admin Portal
+
 # UserAuthentication
-
-Url = https://maymhuu.github.io/portal-violatemplate/
-
 Username = admin / Password = 123456
+
+#Usage Framework
+Semantic UI
